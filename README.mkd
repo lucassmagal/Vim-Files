@@ -16,15 +16,12 @@ You might need create a symlink from ~/.vimrc to ~/.vim/.vimrc:
 
     $ ln -s $HOME/.vim/.vimrc $HOME/.vimrc
 
-Based on these links
---------------------
+Commands
+--------
 
-* [How I Boosted My Vim][1] 
-* [Vim sessions and map leader][2]
-* [Seven reasons why you should switch to Vim][3]
-* [Slackorama's Vim file][4]
-* [Vim IDE para programadores Python][5]
-* [Francisco Souza's Vim Files][6]
+* <F4> View TagList
+* <F5> View NERDTree
+* 
 
 Plugins used
 ------------
@@ -49,11 +46,15 @@ Plugins used
 * [Markdown syntax highlighting][Markdown]
 * [txt.vim][TXT]
 
-Commands
---------
+References
+---------
 
-TODO Citar cada um dos comandos customizados, inclusive outros que eu criar.
-Funções são uma boa também.
+* [How I Boosted My Vim][1] 
+* [Vim sessions and map leader][2]
+* [Seven reasons why you should switch to Vim][3]
+* [Slackorama's Vim file][4]
+* [Vim IDE para programadores Python][5]
+* [Francisco Souza's Vim Files][6]
 
 [1]: http://nvie.com/posts/how-i-boosted-my-vim/
 [2]: http://feralchicken.wordpress.com/2011/01/03/vim-sessions-and-map-leader/
