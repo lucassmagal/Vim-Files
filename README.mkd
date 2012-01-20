@@ -5,13 +5,16 @@ How to use it
 -----------------
 
 To use my vimfiles, follow these commands:
-    cd $HOME
-    git clone git://github.com/lucassmagal/Vim-Files.git .vim
-    cd $HOME/.vim
-    git submodule init
-    git submodule update --init --recursive
+
+    $ cd $HOME
+    $ git clone git://github.com/lucassmagal/Vim-Files.git .vim
+    $ cd $HOME/.vim
+    $ git submodule init
+    $ git submodule update --init --recursive
+
 You might need create a symlink from ~/.vimrc to ~/.vim/.vimrc:
-    ln -s $HOME/.vim/.vimrc $HOME/.vimrc
+
+    $ ln -s $HOME/.vim/.vimrc $HOME/.vimrc
 
 Based on these links
 --------------------
