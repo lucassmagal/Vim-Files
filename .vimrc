@@ -1,23 +1,23 @@
 " TODO
-" melhorar taglist, criar atalho e arranjar jeito de fazer autoupdate
-" melhorar gerenciamento de tabs, tiles e buffers
-" melhorar gerenciamento de sessões (ver uso de leader)
-" melhorar gerenciamento de tabulação (backspace deve voltar 2 tabs)
-" melhorar copy/paste externo. Uso de leader
 " Colocar tuto para LustyExplorer e todos os meus plugins
-" COLOCAR O VIM FILE TOTALMENTE INTUITIVO
-" http://nvie.com/posts/how-i-boosted-my-vim/
-"+yy
-"+p
-" http://feralchicken.wordpress.com/2011/01/03/vim-sessions-and-map-leader/
-" http://agiliq.com/blog/2010/11/seven-reasons-why-you-should-switch-to-vim-for-dja/
-" http://www.slackorama.com/projects/vim/vimrc.html
 " explicar comandos de folding e :r!
 
+" Para entender o que cada comando faz, minha recomendação
+" é usar o help do Vim . Digitem ':h <comando>' para saberem
+" mais. Por exemplo, digitem ':h nowrap'
+
+let mapleader=","
+
+filetype plugin indent on
+
+syntax on
+
+nnoremap ; :
+cmap w!! w !sudo tee % >/dev/null
+    " Salvar arquivo sem sudo
 
 set nocompatible
 set hidden
-let mapleader=","
 set nowrap
 set number
 set shiftround
@@ -26,17 +26,14 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
-set history=100
-set undolevels=100
+set history=1000
+set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set title
 set visualbell
 set noerrorbells
 set nobackup
 set noswapfile
-filetype plugin indent on
-
-" Configurações do TAB
 set wildmenu
 set wildmode=list:longest
 set tabstop=4
@@ -47,54 +44,53 @@ set autoindent
 set expandtab
 set smartindent
 set smarttab
-
-autocmd filetype python set expandtab
-syntax on
-if &t_Co >= 256 || has("gui_running")
-  colorscheme mustang
-endif
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
-autocmd filetype html,xml set listchars-=tab:>.
 set pastetoggle=<F2>
-nnoremap ; :
-cmap w!! w !sudo tee % >/dev/null
 set guioptions-=T
 set linespace=3
 set autochdir
 
-" Busca com CTRL+F
-noremap <C-F> /
-vnoremap <C-F> <C-Q>/
-inoremap <C-F> <C-O>/
+autocmd filetype python set expandtab
+autocmd filetype html,xml set listchars-=tab:>.
 
-" Abre arquivos com CTRL+O
-noremap <C-O> :tabnew
-vnoremap <C-O> <C-Q>:tabnew
-inoremap <C-O> <C-O>:tabnew
+autocmd filetype ruby set tabstop=2
+autocmd filetype ruby set softtabstop=2
+autocmd filetype ruby set shiftwidth=2
 
-vnoremap <BS> d
+if &t_Co >= 256 || has("gui_running")
+  colorscheme mustang
+endif
 
-" CTRL-S salva
-noremap <C-S>  :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-inoremap <C-S> <C-O>:update<CR>
+" Configuração do plugin TagList
+let Tlist_Auto_Update = 1
+noremap <F4> :TlistToggle<CR>
+inoremap <F4> <C-O>:TlistToggle<CR>
 
-" CTRL-Z desfaz
-noremap <C-Z> u
-vnoremap <C-Z> <C-C>u
-inoremap <C-Z> <C-O>u
+" Configuração do plugin NERDTree
+noremap <F5> :NERDTreeToggle<CR>
+inoremap <F5> <C-O>:NERDTreeToggle<CR>
 
-" CTRL-Y refaz
-noremap <C-Y> <C-R>
-inoremap <C-Y> <C-O><C-R>
+" Copy/paste externo
+map <leader>yy "+yy
+map <leader>pp "+p
 
-" CTRL-A seleciona tudo
-noremap <C-A> gggH<C-O>G
-inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
-cnoremap <C-A> <C-C>gggH<C-O>G
-onoremap <C-A> <C-C>gggH<C-O>G
-snoremap <C-A> <C-C>gggH<C-O>G
-xnoremap <C-A> <C-C>ggVG
+" Gerenciamento de tabs
+map <leader>tt :tabnew<CR>
+map <leader>tc :tabclose<CR>
+map <leader>tn :tabnext<CR>
+
+" Gerenciamento de buffers
+noremap <F6> :buffers<CR>
+inoremap <F6> <C-O>:buffers<CR>
+map <leader>bf :buffer
+
+" Gerenciamento de sessões no Vim
+map <leader>ss :SaveSession
+map <leader>so :OpenSession
+map <leader>sc :CloseSession
+map <leader>sd :DeleteSession
+
+au BufNewFile,BufRead *.txt source ~/.vim/syntax/txt.vim
 
 call pathogen#infect()

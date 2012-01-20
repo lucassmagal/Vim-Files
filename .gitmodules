@@ -1,6 +1,3 @@
-[submodule "bundle/LustyExplorer"]
-	path = bundle/LustyExplorer
-	url = git://github.com/vim-scripts/LustyExplorer.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
@@ -28,3 +25,9 @@
 [submodule "bundle/LustyJuggler"]
 	path = bundle/LustyJuggler
 	url = git://github.com/vim-scripts/LustyJuggler.git
+[submodule "bundle/vim-session"]
+	path = bundle/vim-session
+	url = git://github.com/xolox/vim-session.git
+[submodule "bundle/Lusty-Explorer"]
+	path = bundle/Lusty-Explorer
+	url = git://github.com/vim-scripts/LustyExplorer.git

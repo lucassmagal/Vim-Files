@@ -1,24 +1,27 @@
-Lucas S. Magalhães' Vim files
+My Vimfiles
 =============================
 
-TODO This is my vim configuration files (...)
-
-How to download
+How to use it
 -----------------
 
-TODO (cd ...)
-git clone ...
-ln ...
-OK
+To use my vimfiles, follow these commands:
+    cd $HOME
+    git clone git://github.com/lucassmagal/Vim-Files.git .vim
+    cd $HOME/.vim
+    git submodule init
+    git submodule update --init --recursive
+You might need create a symlink from ~/.vimrc to ~/.vim/.vimrc:
+    ln -s $HOME/.vim/.vimrc $HOME/.vimrc
 
 Based on these links
 --------------------
 
-* [How I Boosted My Vim][1]
+* [How I Boosted My Vim][1] 
 * [Vim sessions and map leader][2]
 * [Seven reasons why you should switch to Vim][3]
 * [Slackorama's Vim file][4]
 * [Vim IDE para programadores Python][5]
+* [Francisco Souza's Vim Files][6]
 
 Plugins used
 ------------
@@ -33,12 +36,15 @@ Plugins used
 * [Vim-taglist][Taglist]
 * [Vim-togglemouse][Toggle]
 * [Zencoding-vim][Zen]
+* [Vim-Session][Session]
+* [LustyJuggler][Juggler]
 
 ### Also
 
-* [Django snippets][Django snippets]
+* [Django snippets for SnipMate][Django snippets]
 * [Mustang theme][Mustang]
 * [Markdown syntax highlighting][Markdown]
+* [txt.vim][TXT]
 
 Commands
 --------
@@ -51,6 +57,7 @@ Funções são uma boa também.
 [3]: http://agiliq.com/blog/2010/11/seven-reasons-why-you-should-switch-to-vim-for-dja/
 [4]: http://www.slackorama.com/projects/vim/vimrc.html
 [5]: http://avelino.us/2011/12/22/vim-ide-para-programadores-python/
+[6]: https://github.com/fsouza/vimfiles
 
 [Pathogen]: https://github.com/tpope/vim-pathogen
 [Lusty]: https://github.com/vim-scripts/LustyExplorer
@@ -62,7 +69,10 @@ Funções são uma boa também.
 [Taglist]: https://github.com/vim-scripts/taglist.vim
 [Toggle]: https://github.com/nvie/vim-togglemouse
 [Zen]: https://github.com/mattn/zencoding-vim
+[Session]: https://github.com/xolox/vim-session
+[Juggler]: https://github.com/vim-scripts/LustyJuggler
 
 [Django snippets]: https://github.com/robhudson/snipmate_for_django
 [Mustang]: https://github.com/cschlueter/vim-mustang
 [Markdown]: https://github.com/plasticboy/vim-markdown
+[TXT]: http://aurelio.net/vim/txt.vim
