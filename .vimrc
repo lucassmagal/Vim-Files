@@ -13,22 +13,17 @@
 " http://agiliq.com/blog/2010/11/seven-reasons-why-you-should-switch-to-vim-for-dja/
 " http://www.slackorama.com/projects/vim/vimrc.html
 " explicar comandos de folding e :r!
+
+
 set nocompatible
 set hidden
 let mapleader=","
-set wildmode=list:longest
 set nowrap
-set tabstop=2
-set backspace=indent,eol,start
-set autoindent
-set copyindent
 set number
-set shiftwidth=2
 set shiftround
 set showmatch
 set ignorecase
 set smartcase
-set expandtab
 set hlsearch
 set incsearch
 set history=100
@@ -40,6 +35,19 @@ set noerrorbells
 set nobackup
 set noswapfile
 filetype plugin indent on
+
+" Configurações do TAB
+set wildmenu
+set wildmode=list:longest
+set tabstop=4
+set softtabstop=4
+set backspace=indent,eol,start
+set shiftwidth=4
+set autoindent
+set expandtab
+set smartindent
+set smarttab
+
 autocmd filetype python set expandtab
 syntax on
 if &t_Co >= 256 || has("gui_running")
