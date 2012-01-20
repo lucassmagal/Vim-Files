@@ -19,9 +19,40 @@ You might need create a symlink from ~/.vimrc to ~/.vim/.vimrc:
 Commands
 --------
 
-* <F4> View TagList
-* <F5> View NERDTree
-* 
+### Shortcuts
+
+* F2  ~> Paste toggle
+* F4  ~> View TagList
+* F5  ~> View NERDTree
+* F6  ~> View Buffers ~> :Buffers
+* F12 ~> Toggle mouse
+
+### Custom commands
+
+* ,yy ~> copy externo ~> "+yy
+* ,pp ~> paste externo ~> "+p
+* ,tt ~> :tabnew
+* ,tc ~> :tabclose
+* ,tn ~> :tabnext
+* ,vf ~> :buffer
+* ,ss ~> :SaveSession
+* ,so ~> :OpenSession
+* ,sc ~> :CloseSession
+* ,sd ~> :DeleteSession
+* w!! ~> forçar salvamento sem sudo
+* ,lf ~> Opens LustyExplorer
+* ,lr ~> Opens LustyExplorer at the directory of the current file.
+* View [this link][Fugitive] to learn about git commands on Vim
+* And [this link][Rake] to learn rake commands on Vim
+
+### Vim commands
+
+View [this link][7] to view 100 Vim commands. Algo, these commands (not specified in
+this link above) are really useful:
+
+* [Copy, cut and paste](http://vim.wikia.com/wiki/Copy,_cut_and_paste)
+* u ~> undo
+* ctrl+r ~> redo
 
 Plugins used
 ------------
@@ -62,6 +93,7 @@ References
 [4]: http://www.slackorama.com/projects/vim/vimrc.html
 [5]: http://avelino.us/2011/12/22/vim-ide-para-programadores-python/
 [6]: https://github.com/fsouza/vimfiles
+[7]: http://www.catswhocode.com/blog/100-vim-commands-every-programmer-should-know
 
 [Pathogen]: https://github.com/tpope/vim-pathogen
 [Lusty]: https://github.com/vim-scripts/LustyExplorer
