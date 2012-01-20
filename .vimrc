@@ -59,7 +59,13 @@ autocmd filetype ruby set softtabstop=2
 autocmd filetype ruby set shiftwidth=2
 
 if &t_Co >= 256 || has("gui_running")
-  colorscheme mustang
+  " Choose between 'mustang' or 'solarized' theme
+  " Whichever you want, comment the other lines
+
+  " colorscheme mustang
+
+  colorscheme solarized
+  set background=light
 endif
 
 " Configuração do plugin TagList

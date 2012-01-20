@@ -31,3 +31,6 @@
 [submodule "bundle/Lusty-Explorer"]
 	path = bundle/Lusty-Explorer
 	url = git://github.com/vim-scripts/LustyExplorer.git
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
