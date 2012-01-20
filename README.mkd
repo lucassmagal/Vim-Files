@@ -1,9 +1,6 @@
 My Vimfiles
 =============================
 
-How to use it
------------------
-
 To use my vimfiles, follow these commands:
 
     $ cd $HOME
@@ -47,7 +44,7 @@ Commands
 
 ### Vim commands
 
-View [this link][7] to view 100 Vim commands. Algo, these commands (not specified in
+[This link][7] has 100 Vim commands. Algo, these commands (not specified in
 this link above) are really useful:
 
 * [Copy, cut and paste](http://vim.wikia.com/wiki/Copy,_cut_and_paste)
