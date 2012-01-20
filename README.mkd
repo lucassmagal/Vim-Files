@@ -71,6 +71,7 @@ Plugins used
 
 * [Django snippets for SnipMate][Django snippets]
 * [Mustang theme][Mustang]
+* [Solarized theme][Solarized]
 * [Markdown syntax highlighting][Markdown]
 * [txt.vim][TXT]
 
@@ -107,5 +108,6 @@ References
 
 [Django snippets]: https://github.com/robhudson/snipmate_for_django
 [Mustang]: https://github.com/cschlueter/vim-mustang
+[Solarized]: https://github.com/altercation/vim-colors-solarized
 [Markdown]: https://github.com/plasticboy/vim-markdown
 [TXT]: http://aurelio.net/vim/txt.vim
