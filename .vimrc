@@ -1,7 +1,3 @@
-" TODO
-" Colocar tuto para LustyExplorer e todos os meus plugins
-" explicar comandos de folding e :r!
-
 " Para entender o que cada comando faz, minha recomendação
 " é usar o help do Vim . Digitem ':h <comando>' para saberem
 " mais. Por exemplo, digitem ':h nowrap'
@@ -67,6 +63,9 @@ if &t_Co >= 256 || has("gui_running")
   colorscheme solarized
   set background=light
 endif
+
+" Atalho para :w
+map <leader>w :w<CR>
 
 " Configuração do plugin TagList
 let Tlist_Auto_Update = 1
