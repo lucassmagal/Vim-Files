@@ -1,101 +1,69 @@
 " Para entender o que cada comando faz, minha recomendação
-" é usar o help do Vim . Digitem ':h <comando>' para saberem
+" é usar o help do Vim . Digitem ':h <comando>' para saber
 " mais. Por exemplo, digitem ':h nowrap'
+
+let $VIMHOME = $HOME."/.vim"
 
 let mapleader=","
 
+colorscheme mustang
+
+filetype on
 filetype plugin indent on
 
-syntax on
+" Salvar arquivo sem sudo
+cmap w!! w !sudo tee % >/dev/null
 
 nnoremap ; :
-cmap w!! w !sudo tee % >/dev/null
-    " Salvar arquivo sem sudo
 
-set nocompatible
-set hidden
-set nowrap
-set number
+syntax on " ativa syntax-highlighting
+set nostartofline
+set nocompatible " sem modo de compatibilidade VI
+set hidden " permite mudar de buffer sem obrigar a salvá-lo
+set nowrap " não realiza a quebra de linhas
+set number " exibe numeros de linhas
 set shiftround
-set showmatch
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
-set history=1000
-set undolevels=1000
-set wildignore=*.swp,*.bak,*.pyc,*.class
-set title
-set visualbell
-set noerrorbells
-set nobackup
-set noswapfile
-set wildmenu
-set wildmode=list:longest
-set tabstop=4
+set showmatch " mostra parenteses equivalentes (ou [, ou {)
+set matchtime=7 " quanto tempo será 'piscado' na tela
+set ignorecase " ignora maiuscula ou minuscula em busca
+set smartcase " ignora o set anterior se a busca contem maiusculas
+set hlsearch " highlight search
+set incsearch " enquanto faz a busca mostra os resultados
+set history=1000 " quantas linhas lembrar
+set undolevels=1000 " quantos undo's podem ser feitos
+set wildignore=*.swp,*.bak,*.pyc,*.class " arquivos que serão ignorados em caso de completamento de arquivos e diretorios
+set title " titulo do terminal é titulo do arquivo
+set nobackup " não cria arquivos de backup
+set noswapfile " não usar um swapfile para o buffer
+set wildmenu " command-line completion opera de forma melhorada
+set wildmode=list:longest " configs para o completion... exibe em lista, se há mais de um, e seleciona o com a maior compatibilidade
+set tabstop=4 " qtde de espaços inseridos com um tab
 set softtabstop=4
-set backspace=indent,eol,start
-set shiftwidth=4
-set autoindent
-set expandtab
-set smartindent
+set backspace=indent,eol,start " configura o comportamento do backspace
+set shiftwidth=4 " qtde de espaços utilizados no autoindent
+set autoindent " usa indentação da linha atual em nova linha
+set expandtab " insere espaços ao invés de TABs
+set smartindent " auto-indentação inteligente
 set smarttab
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
-set pastetoggle=<F2>
-set guioptions-=T
-set linespace=3
-set autochdir
+set pastetoggle=<F2> " alterna entre Paste Mode
+set linespace=3 " espaçamento entre linhas
+set autochdir " muda o working directory a cada novo arquivo aberto
+set completeopt=menu,longest,preview " improve the way autocomplete works
 
-autocmd filetype python set expandtab
-autocmd filetype html,xml set listchars-=tab:>.
+" Folding
+set foldenable " Turn on folding
+set foldopen-=search " don't open folds when you search into them
+set foldopen-=undo " don't open folds when you undo stuff
+set foldmethod=indent " Fold on the marker
+set foldlevel=1000 " Don't autofold anything
+:highlight Folded guibg=grey guifg=blue " Customize color folded
+:highlight FoldColumn guibg=darkgrey guifg=white" Customize fold column
 
-autocmd filetype ruby set tabstop=2
-autocmd filetype ruby set softtabstop=2
-autocmd filetype ruby set shiftwidth=2
-
-if &t_Co >= 256 || has("gui_running")
-  " Choose between 'mustang' or 'solarized' theme
-  " Whichever you want, comment the other lines
-
-  " colorscheme mustang
-
-  colorscheme solarized
-  set background=light
-endif
-
-" Atalho para :w
-map <leader>w :w<CR>
-
-" Configuração do plugin TagList
-let Tlist_Auto_Update = 1
-noremap <F4> :TlistToggle<CR>
-inoremap <F4> <C-O>:TlistToggle<CR>
-
-" Configuração do plugin NERDTree
-noremap <F5> :NERDTreeToggle<CR>
-inoremap <F5> <C-O>:NERDTreeToggle<CR>
-
-" Copy/paste externo
-map <leader>yy "+yy
-map <leader>pp "+p
-
-" Gerenciamento de tabs
-map <leader>tt :tabnew<CR>
-map <leader>tc :tabclose<CR>
-map <leader>tn :tabnext<CR>
-
-" Gerenciamento de buffers
-noremap <F6> :buffers<CR>
-inoremap <F6> <C-O>:buffers<CR>
-map <leader>bf :buffer
-
-" Gerenciamento de sessões no Vim
-map <leader>ss :SaveSession
-map <leader>so :OpenSession
-map <leader>sc :CloseSession
-map <leader>sd :DeleteSession
-
-au BufNewFile,BufRead *.txt source ~/.vim/syntax/txt.vim
+source $VIMHOME/autoload/shortcuts.vim
+source $VIMHOME/autoload/syntastic.vim
+source $VIMHOME/autoload/powerline.vim
+source $VIMHOME/autoload/taglist.vim
 
 call pathogen#infect()

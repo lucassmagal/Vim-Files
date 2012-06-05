@@ -40,7 +40,6 @@ Commands
 * ,lf ~> Opens LustyExplorer
 * ,lr ~> Opens LustyExplorer at the directory of the current file.
 * View [this link][Fugitive] to learn about git commands on Vim
-* And [this link][Rake] to learn rake commands on Vim
 
 ### Vim commands
 
@@ -57,10 +56,10 @@ Plugins used
 * [Pathogen][Pathogen]
 * [Lusty Explorer][Lusty]
 * [NERDTree][Nerd]
-* [Pyflakes-vim][Flakes]
+* [Pyflakes-vim][Flakes] REMOVIDO
 * [SnipMate][Snipmate]
 * [Vim-fugitive][Fugitive]
-* [Vim-rake][Rake]
+* [Vim-rake][Rake] REMOVIDO
 * [Vim-taglist][Taglist]
 * [Vim-togglemouse][Toggle]
 * [Zencoding-vim][Zen]
