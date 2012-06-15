@@ -1,70 +1,56 @@
 My Vimfiles
 =============================
 
-To use my vimfiles, follow these commands:
+To install my vim files easily, just type this command:
 
-    $ cd $HOME
-    $ git clone git://github.com/lucassmagal/Vim-Files.git .vim
-    $ cd $HOME/.vim
-    $ git submodule init
-    $ git submodule update --init --recursive
+    $ wget ... | sh
 
-You might need create a symlink from ~/.vimrc to ~/.vim/.vimrc:
+And that's all. Remember that you should have _git_ installed.
 
-    $ ln -s $HOME/.vim/.vimrc $HOME/.vimrc
 
 Commands
 --------
 
-### Shortcuts
-
 * F2  ~> Paste toggle
 * F4  ~> View TagList
 * F5  ~> View NERDTree
-* F6  ~> View Buffers ~> :Buffers
 * F12 ~> Toggle mouse
-
-### Custom commands
-
-* ,yy ~> copy externo ~> "+yy
-* ,pp ~> paste externo ~> "+p
-* ,tt ~> :tabnew
-* ,tc ~> :tabclose
-* ,tn ~> :tabnext
-* ,vf ~> :buffer
-* ,ss ~> :SaveSession
-* ,so ~> :OpenSession
-* ,sc ~> :CloseSession
-* ,sd ~> :DeleteSession
-* w!! ~> forçar salvamento sem sudo
-* ,lf ~> Opens LustyExplorer
-* ,lr ~> Opens LustyExplorer at the directory of the current file.
-* View [this link][Fugitive] to learn about git commands on Vim
-
-### Vim commands
+* , ~> <leader>
+* ,w ~> fast save
+* ,yy ~> external copy
+* ,pp ~> external paste
+* w!! ~> force save without sudo
+* ,lf ~> LustyExplorer
+* ,lr ~> LustyExplorer at the directory of the current file.
+* ctrl+t t ~> open a new tab
+* ctrl+t w ~> close the tab
+* shift-right ~> next tab
+* shift-left ~> previous tab
+* ctrl+s s ~> save session
+* ctrl+s o ~> open session
+* ctrl+s c ~> close session
+* ctrl+s d ~> delete session
 
 [This link][7] has 100 Vim commands. Algo, these commands (not specified in
 this link above) are really useful:
 
-* [Copy, cut and paste](http://vim.wikia.com/wiki/Copy,_cut_and_paste)
-* u ~> undo
-* ctrl+r ~> redo
 
-Plugins used
-------------
+Plugins
+-------
 
 * [Pathogen][Pathogen]
 * [Lusty Explorer][Lusty]
 * [NERDTree][Nerd]
-* [Pyflakes-vim][Flakes] REMOVIDO
 * [SnipMate][Snipmate]
 * [Vim-fugitive][Fugitive]
-* [Vim-rake][Rake] REMOVIDO
 * [Vim-taglist][Taglist]
 * [Vim-togglemouse][Toggle]
 * [Zencoding-vim][Zen]
 * [Vim-Session][Session]
-* [LustyJuggler][Juggler]
+* [FontZoom][fontzoom]
+* [Powerline][powerline]
+* [Surround][surround]
+* [Syntastic][syntastic]
 
 ### Also
 
@@ -73,6 +59,7 @@ Plugins used
 * [Solarized theme][Solarized]
 * [Markdown syntax highlighting][Markdown]
 * [txt.vim][TXT]
+
 
 References
 ---------
@@ -83,6 +70,7 @@ References
 * [Slackorama's Vim file][4]
 * [Vim IDE para programadores Python][5]
 * [Francisco Souza's Vim Files][6]
+* [Gilson Filho's Vim Files][8]
 
 [1]: http://nvie.com/posts/how-i-boosted-my-vim/
 [2]: http://feralchicken.wordpress.com/2011/01/03/vim-sessions-and-map-leader/
@@ -91,6 +79,7 @@ References
 [5]: http://avelino.us/2011/12/22/vim-ide-para-programadores-python/
 [6]: https://github.com/fsouza/vimfiles
 [7]: http://www.catswhocode.com/blog/100-vim-commands-every-programmer-should-know
+[8]: https://github.com/gilsondev/vimfiles
 
 [Pathogen]: https://github.com/tpope/vim-pathogen
 [Lusty]: https://github.com/vim-scripts/LustyExplorer
@@ -104,7 +93,10 @@ References
 [Zen]: https://github.com/mattn/zencoding-vim
 [Session]: https://github.com/xolox/vim-session
 [Juggler]: https://github.com/vim-scripts/LustyJuggler
-
+[fontzoom]: https://github.com/thinca/vim-fontzoom
+[powerline]: https://github.com/Lokaltog/vim-powerline
+[surround]: https://github.com/tpope/vim-surround
+[syntastic]: https://github.com/scrooloose/syntastic
 [Django snippets]: https://github.com/robhudson/snipmate_for_django
 [Mustang]: https://github.com/cschlueter/vim-mustang
 [Solarized]: https://github.com/altercation/vim-colors-solarized

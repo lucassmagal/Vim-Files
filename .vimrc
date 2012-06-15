@@ -1,22 +1,16 @@
 " Para entender o que cada comando faz, minha recomendação
 " é usar o help do Vim . Digitem ':h <comando>' para saber
-" mais. Por exemplo, digitem ':h nowrap'
+" mais, por exemplo ':h nowrap'
 
 let $VIMHOME = $HOME."/.vim"
-
-let mapleader=","
 
 colorscheme mustang
 
 filetype on
 filetype plugin indent on
 
-" Salvar arquivo sem sudo
-cmap w!! w !sudo tee % >/dev/null
-
-nnoremap ; :
-
 syntax on " ativa syntax-highlighting
+set colorcolumn=80
 set nostartofline
 set nocompatible " sem modo de compatibilidade VI
 set hidden " permite mudar de buffer sem obrigar a salvá-lo
@@ -65,5 +59,6 @@ source $VIMHOME/autoload/shortcuts.vim
 source $VIMHOME/autoload/syntastic.vim
 source $VIMHOME/autoload/powerline.vim
 source $VIMHOME/autoload/taglist.vim
+source $VIMHOME/autoload/sessions.vim
 
 call pathogen#infect()

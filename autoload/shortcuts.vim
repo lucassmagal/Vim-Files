@@ -1,28 +1,32 @@
-" Atalho para :w
+let mapleader=","
+
+nnoremap ; :
+
+" save shortcut
 map <leader>w :w<CR>
 
-" Copy/paste externo
+" to save without sudo
+cmap w!! w !sudo tee % >/dev/null
+
+" external Copy/paste
 map <leader>yy "+yy
 map <leader>pp "+p
 
-" plugin Taglist
+" Taglist
 noremap <F4> :TlistToggle<CR>
 inoremap <F4> <C-O>:TlistToggle<CR>
 
-" plugin NERDTree
+" NERDTree
 noremap <F5> :NERDTreeToggle<CR>
 inoremap <F5> <C-O>:NERDTreeToggle<CR>
 
-" Gerenciamento de tabs
+" Tab management
 map <C-T>t :tabnew<CR>
 map <C-T>w :tabclose<CR>
 map <S-Right> :tabnext<CR>
 map <S-Left> :tabprev<CR>
 
 " Gerenciamento de buffers
-noremap <F6> :buffers<CR>
-inoremap <F6> <C-O>:buffers<CR>
-map <leader>bf :buffer
 map <A-Left> :bnext <CR>
 map <A-Right> :bprevious <CR>
 
