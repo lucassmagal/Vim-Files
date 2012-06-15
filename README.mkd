@@ -3,7 +3,7 @@ My Vimfiles
 
 To install my vim files easily, just type this command:
 
-    $ wget ... | sh
+    $ curl https://raw.github.com/lucassmagal/Vim-Files/master/install.sh | sh
 
 And that's all. Remember that you should have _git_ installed.
 
@@ -15,7 +15,7 @@ Commands
 * F4  ~> View TagList
 * F5  ~> View NERDTree
 * F12 ~> Toggle mouse
-* , ~> <leader>
+* , ~> leader
 * ,w ~> fast save
 * ,yy ~> external copy
 * ,pp ~> external paste
