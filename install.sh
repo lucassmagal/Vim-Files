@@ -3,7 +3,7 @@
 echo "~~ Installing lucassmagal's vim files ~~"
 
 if [ ! $(which git) ]; then
-    echo "Git não está instalado, processo abortado"
+    echo "Git is not installed, aborting..."
     exit 1
 fi
 
