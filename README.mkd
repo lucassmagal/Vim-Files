@@ -31,8 +31,7 @@ Commands
 * ctrl+s c ~> close session
 * ctrl+s d ~> delete session
 
-[This link][7] has 100 Vim commands. Algo, these commands (not specified in
-this link above) are really useful:
+[This link][7] has 100 Vim commands.
 
 
 Plugins
