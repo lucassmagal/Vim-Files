@@ -13,9 +13,6 @@
 [submodule "bundle/vim-togglemouse"]
 	path = bundle/vim-togglemouse
 	url = git://github.com/nvie/vim-togglemouse.git
-[submodule "bundle/zencoding-vim"]
-	path = bundle/zencoding-vim
-	url = git://github.com/mattn/zencoding-vim.git
 [submodule "bundle/vim-session"]
 	path = bundle/vim-session
 	url = git://github.com/xolox/vim-session.git
@@ -37,3 +34,6 @@
 [submodule "bundle/fontzoom"]
 	path = bundle/fontzoom
 	url = git://github.com/thinca/vim-fontzoom.git
+[submodule "bundle/sparkup"]
+	path = bundle/sparkup
+	url = git://github.com/kogakure/vim-sparkup.git

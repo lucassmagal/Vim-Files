@@ -45,12 +45,12 @@ Plugins
 * [Vim-fugitive][Fugitive]
 * [Vim-taglist][Taglist]
 * [Vim-togglemouse][Toggle]
-* [Zencoding-vim][Zen]
 * [Vim-Session][Session]
 * [FontZoom][fontzoom]
 * [Powerline][powerline]
 * [Surround][surround]
 * [Syntastic][syntastic]
+* [Vim-Sparkup][sparkup]
 
 ### Also
 
@@ -102,3 +102,4 @@ References
 [Solarized]: https://github.com/altercation/vim-colors-solarized
 [Markdown]: https://github.com/plasticboy/vim-markdown
 [TXT]: http://aurelio.net/vim/txt.vim
+[sparkup]: https://github.com/kogakure/vim-sparkup
