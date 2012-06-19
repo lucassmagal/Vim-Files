@@ -11,6 +11,7 @@ filetype plugin indent on
 
 syntax on " ativa syntax-highlighting
 set colorcolumn=80
+set cursorline
 set nostartofline
 set nocompatible " sem modo de compatibilidade VI
 set hidden " permite mudar de buffer sem obrigar a salvá-lo

@@ -1,6 +1,6 @@
 " colorscheme mustang
 colorscheme solarized
-set background=dark
+set background=light
 
 set guifont=Ubuntu\ Mono\ 12
 set guioptions=aem "adding otherelse
